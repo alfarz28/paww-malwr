@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "paww.malwr.id | CTF Documentation",
-  description: "Just a NPC",
+  description: "Just a collection of writeups from various CTF challenges I've done. I hope you find something useful!",
+  icons: {
+    icon: "/pavicon.png",
+  },
 };
 
 export default function RootLayout({
