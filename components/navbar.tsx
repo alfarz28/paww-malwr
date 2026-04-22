@@ -16,9 +16,14 @@ export default function Navbar() {
 
   return (
     <nav className="w-full h-auto py-4 sm:py-0 sm:h-20 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 border-b border-white/5 relative z-10">
-      <Link href="/" className="flex items-center gap-1 group font-mono font-bold text-lg whitespace-nowrap">
+      <Link
+        href="/"
+        className="flex items-center gap-1 group font-mono font-bold text-lg whitespace-nowrap"
+      >
         <span className="text-gray-500">~/</span>
-        <span className="text-white group-hover:text-primary transition-colors">paww.malwr.es</span>
+        <span className="text-white group-hover:text-primary transition-colors">
+          paww.malwr.id
+        </span>
       </Link>
 
       <ul className="flex items-center gap-1 sm:gap-6 bg-white/5 px-2 sm:px-6 py-1.5 sm:py-2 rounded-full border border-white/5 backdrop-blur-md">

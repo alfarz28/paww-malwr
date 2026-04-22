@@ -34,7 +34,7 @@ export default function HomeClient({ recentPosts }: { recentPosts: any[] }) {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white break-all sm:break-normal"
         >
-          paww.malwr.es
+          paww.malwr.id
         </motion.h1>
 
         <motion.p
@@ -44,7 +44,8 @@ export default function HomeClient({ recentPosts }: { recentPosts: any[] }) {
           className="text-gray-400 text-lg flex items-start gap-2"
         >
           <span className="text-primary font-mono">{">"}</span>
-          Just a collection of writeups from various CTF challenges I've done. I hope you find something useful!
+          Just a collection of writeups from various CTF challenges I've done. I
+          hope you find something useful!
         </motion.p>
       </section>
 

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "paww.malwr.es | CTF Documentation",
+  title: "paww.malwr.id | CTF Documentation",
   description: "Just a NPC",
 };
 
