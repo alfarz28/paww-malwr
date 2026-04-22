@@ -9,6 +9,10 @@ A modern, fast, and sleek Content Management System (CMS) built specifically for
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white)
 
+<p align="center">
+  <img src="public/screencapture-localhost-3000-2026-04-22-22_48_08.png" alt="Home Page Screenshot" width="100%" />
+</p>
+
 ## 🚀 Overview
 
 This custom-built CMS handles the public display and private management of my CTF writeups:
