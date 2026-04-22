@@ -1,17 +1,13 @@
+import { Suspense } from "react";
 import { ArrowLeft, Calendar, Flag } from "lucide-react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
+import LoadingState from "@/components/loading";
 
 export const revalidate = 0; // Disable cache so new posts appear immediately
 
-export default async function PostPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  
+async function PostContent({ id }: { id: string }) {
   const { data: post, error } = await supabase
     .from('posts')
     .select('*')
@@ -21,18 +17,18 @@ export default async function PostPage({
   if (error || !post) {
     notFound();
   }
-  
+
   return (
-    <div className="max-w-4xl mx-auto pb-16 pt-8 relative z-10">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
       <Link 
         href="/posts" 
-        className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-primary transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-primary transition-colors"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to writeups
       </Link>
       
-      <div className="mb-10">
+      <div>
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-primary/10 border border-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
             <Flag className="w-3 h-3" />
@@ -59,5 +55,19 @@ export default async function PostPage({
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </div>
+  );
+}
+
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  
+  return (
+    <Suspense fallback={<LoadingState type="post" />}>
+      <PostContent id={id} />
+    </Suspense>
   );
 }

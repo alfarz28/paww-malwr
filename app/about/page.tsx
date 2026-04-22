@@ -22,7 +22,7 @@ function TwitterIcon({ className }: { className?: string }) {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col gap-12 pb-16 pt-8 relative z-10 max-w-3xl mx-auto">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

@@ -26,7 +26,7 @@ export default function HomeClient({ recentPosts }: { recentPosts: any[] }) {
   const listPosts = recentPosts.length > 1 ? recentPosts.slice(1, 5) : [];
 
   return (
-    <div className="flex flex-col gap-12 pb-16 max-w-4xl mx-auto w-full pt-8">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
       <section className="flex flex-col items-start text-left relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 10 }}

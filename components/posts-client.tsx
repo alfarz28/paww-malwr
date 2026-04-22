@@ -15,7 +15,7 @@ export default function PostsClient({ posts }: { posts: any[] }) {
   );
 
   return (
-    <div className="flex flex-col gap-10 pb-16 pt-8 relative z-10">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function PostsClient({ posts }: { posts: any[] }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex flex-col gap-4 max-w-4xl"
+        className="flex flex-col gap-4 w-full"
       >
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (

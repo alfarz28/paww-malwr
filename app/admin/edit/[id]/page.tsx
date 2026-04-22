@@ -12,7 +12,7 @@ export default async function AdminEditPage({ params }: { params: Promise<{ id: 
 
   if (!isAuth) {
     return (
-      <div className="pt-16 pb-16 relative z-10 w-full max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
         <LoginForm />
       </div>
     );
@@ -29,7 +29,7 @@ export default async function AdminEditPage({ params }: { params: Promise<{ id: 
   }
 
   return (
-    <div className="pt-16 pb-16 relative z-10 w-full max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto w-full flex flex-col gap-12 pb-16 pt-4 relative z-10">
       <SubmitForm post={post} />
     </div>
   );
